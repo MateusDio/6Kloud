@@ -1,3 +1,5 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@400..700&family=Twinkle+Star&display=swap');
+
 * {
     margin: 0;
     padding: 0;
@@ -5,80 +7,73 @@
 }
 
 body {
-    background-color: #F3F3F3;
-    font-family: Arial, Helvetica, sans-serif;
+    background-color: #fafafa;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
     display: flex;
-    flex-direction: column;
     align-items: center;
+    justify-content: center;
     min-height: 100vh;
 }
 
 
-header {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    width: 100%;
-    height: 100px;
-    margin-top: 20px;
-}
-
-
-#quadrado {
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    text-align: center;
-    flex-grow: 1;
-}
-
-
-#fundo {
+.container {
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    text-align: center;
-    background-color: rgb(122, 188, 241);
-    width: 300px;
-    height: 300px;
-    border-radius: 20px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
 }
 
+.login-box {
+    background-color: white;
+    border: 1px solid #dbdbdb;
+    padding: 40px;
+    width: 300px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0 2px 6px rgba(0, 0, 0, 0.05);
+    border-radius: 8px;
+}
+
+.logo {
+   font-family: 'Dancing Script', cursive;
+    font-size: 36px;
+    margin-bottom: 30px;
+}
 
 input {
-    width: 200px;
-    height: 40px;
-    border-radius: 9px;
-    border: none;
-    margin-top: 10px;
-    padding: 0 10px;
-    background-color: #fff;
-    font-size: 16px;
-    outline: none;
-    box-shadow: inset 0 0 3px rgba(0, 0, 0, 0.2);
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    font-size: 14px;
+    border: 1px solid #dbdbdb;
+    border-radius: 4px;
+    background-color: #fafafa;
 }
 
-/* Estilo do botão */
+input:focus::placeholder {
+  color: transparent;
+}
+
 button {
-    background-color: #fff;
-    width: 150px;
-    height: 40px;
-    border-radius: 9px;
-    border: 2px solid black;
-    color: black;
-    font-size: 16px;
-    margin-top: 10px;
+    width: 100%;
+    padding: 10px;
+    background-color: #0095f6;
+    border: none;
+    color: white;
+    font-weight: bold;
+    border-radius: 4px;
     cursor: pointer;
-    transition: all 0.4s ease;
+    margin-top: 10px;
+    transition: background-color 0.3s;
 }
 
 button:hover {
-    background-color: black;
-    width: 160px;
-    height: 50px;
-    border-color: white;
-    color: white;
+    background-color: #007ac9;
 }
+
+.divisor {
+    margin: 20px 0;
+    color: #999;
+    font-size: 12px;
+}
+
