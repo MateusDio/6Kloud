@@ -1,48 +1,25 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>6Kloud - Rede Social de Exercícios</title>
-<link rel="stylesheet" href="style1.css" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login - 6Kloud</title>
+    <link rel="stylesheet" href="style2.css">
+    <script src="script2.js" defer></script>
 </head>
+
 <body>
-
-
-<nav class="sidebar">
-  <div class="logo">6Kloud</div>
-  <a href="index.html" class="active">Home</a>
-  <a href="atividades.html">Atividades</a>
-  <a href="#" id="logout">Deslogar</a>
-</nav>
-
-
-<main class="main-content">
-  <form id="postForm" class="post-form">
-    <textarea id="postText" placeholder="O que você fez hoje?" rows="3"></textarea>
-
-    <div class="file-upload-container">
-      <input type="file" id="postMedia" multiple accept="image/*,video/*" />
-      <label for="postMedia">Escolher fotos/vídeos</label>
+    <div class="container">
+        <div class="login-box">
+            <h1 class="logo">6Kloud</h1>
+            <input type="text" id="nome" placeholder=" Nome de usuário ou email">
+            <input type="password" id="senha" placeholder="Senha">
+            <button id="btn">Entrar</button>
+            <div class="divisor"></div>
+          
+        </div>
     </div>
-
-    <div class="checkbox-container" id="atividadeConcluidaContainer" style="display:none;">
-      <span>Marcar atividade como concluída:</span>
-      <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
-      <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
-         <label><input type="radio" name="atividadeConcluida" value="mentais" /> Postagem comum</label>
-    </div>
-
-    <button type="submit">Postar</button>
-  </form>
-
-  <section id="feed" class="feed"></section>
-</main>
-
-
-<div id="imageModal" class="image-modal">
-  <img src="" alt="Imagem Ampliada" />
-</div>
-<script src="script.js"></script>
 </body>
+
 </html>

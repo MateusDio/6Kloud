@@ -6,7 +6,7 @@ const btn = document.getElementById('btn');
 window.addEventListener('DOMContentLoaded', () => {
   const usuarioLogado = localStorage.getItem('usuarioLogado');
   if (usuarioLogado) {
-    window.location.href = 'index.html';
+    window.location.href = 'home.html';
   }
 });
 
@@ -42,5 +42,5 @@ btn.addEventListener('click', () => {
   localStorage.setItem('usuarioLogado', nomeValor); 
 
   
-  window.location.href = 'index.html';
+  window.location.href = 'home.html';
 });

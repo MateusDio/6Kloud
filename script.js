@@ -6,13 +6,13 @@ logoutBtn.addEventListener('click', (e) => {
   const confirmar = confirm("Quer realmente sair da conta?");
   if (confirmar) {
     localStorage.removeItem('usuarioLogado');
-    window.location.href = 'login.html';
+    window.location.href = 'index.html';
   }
 });
 
 const usuarioLogado = localStorage.getItem('usuarioLogado') || 'Você';
 
-// Posts fake novos
+
 const fakePosts = [
   {
     username: "MartaFit",
@@ -184,7 +184,7 @@ postForm.addEventListener('submit', (e) => {
   const radios = atividadeConcluidaContainer.querySelectorAll('input[type="radio"]');
   radios.forEach(radio => radio.checked = false);
 
-  // Liberar URLs temporárias depois de um tempo (pra evitar vazamento de memória)
+
   setTimeout(() => {
     mediaURLs.forEach(url => URL.revokeObjectURL(url));
   }, 60000);
