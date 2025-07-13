@@ -1,48 +1,56 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
-<meta charset="UTF-8" />
-<meta name="viewport" content="width=device-width, initial-scale=1" />
-<title>6Kloud - Rede Social de Exercícios</title>
-<link rel="stylesheet" href="style1.css" />
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>6Kloud - Rede Social de Exercícios</title>
+  <link rel="stylesheet" href="style1.css" />
 </head>
 <body>
+  <nav class="sidebar">
+    <a href="home.html" class="active">Home</a>
+    <a href="atividades.html">Atividades</a>
+    <a href="#" id="logout">Deslogar</a>
+  </nav>
 
+  <main class="main-content">
+    <h1>Feed</h1>
 
-<nav class="sidebar">
-  <div class="logo">6Kloud</div>
-  <a href="home.html" class="active">Home</a>
-  <a href="atividades.html">Atividades</a>
-  <a href="#" id="logout">Deslogar</a>
-</nav>
+    <form id="postForm" class="post-form">
+      <textarea id="postText" placeholder="O que você está fazendo?" rows="3"></textarea>
 
+      <input type="file" id="postMedia" accept="image/*,video/*" multiple />
 
-<main class="main-content">
-  <form id="postForm" class="post-form">
-    <textarea id="postText" placeholder="O que você fez hoje?" rows="3"></textarea>
+      <div id="atividadeConcluidaContainer" style="display:none;">
+        <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
+        <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
+      </div>
 
-    <div class="file-upload-container">
-      <input type="file" id="postMedia" multiple accept="image/*,video/*" />
-      <label for="postMedia">Escolher fotos/vídeos</label>
-    </div>
+      <button type="submit">Postar</button>
+    </form>
 
-    <div class="checkbox-container" id="atividadeConcluidaContainer" style="display:none;">
-      <span>Marcar atividade como concluída:</span>
-      <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
-      <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
-         <label><input type="radio" name="atividadeConcluida" value="mentais" /> Postagem comum</label>
-    </div>
+    <section id="feed" class="feed"></section>
+  </main>
 
-    <button type="submit">Postar</button>
-  </form>
+  <div id="imageModal" class="image-modal">
+    <img src="" alt="Imagem Ampliada" />
+  </div>
 
-  <section id="feed" class="feed"></section>
-</main>
+  <script src="script.js"></script>
+  <script>
+    const imageModal = document.getElementById('imageModal');
+    const modalImg = imageModal.querySelector('img');
 
-
-<div id="imageModal" class="image-modal">
-  <img src="" alt="Imagem Ampliada" />
-</div>
-<script src="script.js"></script>
+    document.addEventListener('click', (e) => {
+      if(e.target.tagName === 'IMG' && e.target.closest('.post-media')) {
+        modalImg.src = e.target.src;
+        imageModal.classList.add('active');
+      }
+      if(e.target === imageModal) {
+        imageModal.classList.remove('active');
+        modalImg.src = '';
+      }
+    });
+  </script>
 </body>
 </html>

@@ -2,7 +2,6 @@ const logoutBtn = document.getElementById('logout');
 
 logoutBtn.addEventListener('click', (e) => {
   e.preventDefault();
-
   const confirmar = confirm("Quer realmente sair da conta?");
   if (confirmar) {
     localStorage.removeItem('usuarioLogado');
@@ -11,7 +10,6 @@ logoutBtn.addEventListener('click', (e) => {
 });
 
 const usuarioLogado = localStorage.getItem('usuarioLogado') || 'Você';
-
 
 const fakePosts = [
   {
@@ -183,7 +181,6 @@ postForm.addEventListener('submit', (e) => {
   atividadeConcluidaContainer.style.display = "none";
   const radios = atividadeConcluidaContainer.querySelectorAll('input[type="radio"]');
   radios.forEach(radio => radio.checked = false);
-
 
   setTimeout(() => {
     mediaURLs.forEach(url => URL.revokeObjectURL(url));
