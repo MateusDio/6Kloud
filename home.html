@@ -1,33 +1,42 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>6Kloud - Rede Social de Exercícios</title>
   <link rel="stylesheet" href="style1.css" />
 </head>
+
 <body>
+
   <nav class="sidebar">
+     <h1>6Kloud</h1>
+     <br>
     <a href="home.html" class="active">Home</a>
     <a href="atividades.html">Atividades</a>
     <a href="#" id="logout">Deslogar</a>
   </nav>
 
   <main class="main-content">
-    <h1>Feed</h1>
+    <h1>Home</h1>
 
-    <form id="postForm" class="post-form">
-      <textarea id="postText" placeholder="O que você está fazendo?" rows="3"></textarea>
+ <form id="postForm" class="post-form">
+  <textarea id="postText" placeholder="O que você está fazendo?" rows="3"></textarea>
 
-      <input type="file" id="postMedia" accept="image/*,video/*" multiple />
+  <div class="media-button-group">
+    <label for="postMedia">Selecionar Mídia</label>
+    <button type="submit">Postar</button>
+  </div>
 
-      <div id="atividadeConcluidaContainer" style="display:none;">
-        <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
-        <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
-      </div>
+  <input type="file" id="postMedia" accept="image/*,video/*" multiple />
 
-      <button type="submit">Postar</button>
-    </form>
+  <div id="atividadeConcluidaContainer" style="display:none;">
+    <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
+    <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
+    <label><input type="radio" name="atividadeConcluida" value="mentais" /> Post Comum</label>
+  </div>
+</form>
 
     <section id="feed" class="feed"></section>
   </main>
@@ -42,15 +51,16 @@
     const modalImg = imageModal.querySelector('img');
 
     document.addEventListener('click', (e) => {
-      if(e.target.tagName === 'IMG' && e.target.closest('.post-media')) {
+      if (e.target.tagName === 'IMG' && e.target.closest('.post-media')) {
         modalImg.src = e.target.src;
         imageModal.classList.add('active');
       }
-      if(e.target === imageModal) {
+      if (e.target === imageModal) {
         imageModal.classList.remove('active');
         modalImg.src = '';
       }
     });
   </script>
 </body>
+
 </html>

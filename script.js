@@ -17,7 +17,7 @@ const fakePosts = [
     avatar: "https://i.pravatar.cc/48?img=32",
     text: "Treino de HIIT feito, suando bastante! 🔥💪",
     media: [
-      "https://images.unsplash.com/photo-1554284126-9cc3d8db70b3?auto=format&fit=crop&w=600&q=80"
+      
     ],
     done: true,
     doneType: "fisicas",
@@ -35,7 +35,7 @@ const fakePosts = [
     avatar: "https://i.pravatar.cc/48?img=51",
     text: "Corrida leve no fim de tarde, clima perfeito! 🌅🏃‍♀️",
     media: [
-      "https://images.unsplash.com/photo-1526403227404-52e0d98bcf8e?auto=format&fit=crop&w=600&q=80",
+      
       "https://images.unsplash.com/photo-1517649763962-0c623066013b?auto=format&fit=crop&w=600&q=80"
     ],
     done: false,
@@ -167,7 +167,7 @@ postForm.addEventListener('submit', (e) => {
 
   const novoPost = {
     username: usuarioLogado,
-    avatar: "https://i.pravatar.cc/48?img=56",
+    avatar: "https://cdn-icons-png.flaticon.com/512/4519/4519678.png",
     text: text,
     media: mediaURLs,
     done: files.length > 0,
