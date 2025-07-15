@@ -11,32 +11,33 @@
 <body>
 
   <nav class="sidebar">
-     <h1>6Kloud</h1>
-     <br>
+    <h1>6Kloud</h1>
+    <br>
     <a href="home.html" class="active">Home</a>
     <a href="atividades.html">Atividades</a>
     <a href="#" id="logout">Deslogar</a>
+    <button id="themeToggle" class="theme-toggle">🌙 Tema Escuro</button>
   </nav>
 
   <main class="main-content">
     <h1>Home</h1>
 
- <form id="postForm" class="post-form">
-  <textarea id="postText" placeholder="O que você está fazendo?" rows="3"></textarea>
+    <form id="postForm" class="post-form">
+      <textarea id="postText" placeholder="O que você está fazendo?" rows="3"></textarea>
 
-  <div class="media-button-group">
-    <label for="postMedia">Selecionar Mídia</label>
-    <button type="submit">Postar</button>
-  </div>
+      <div class="media-button-group">
+        <label for="postMedia">Selecionar Mídia</label>
+        <button type="submit">Postar</button>
+      </div>
 
-  <input type="file" id="postMedia" accept="image/*,video/*" multiple />
+      <input type="file" id="postMedia" accept="image/*,video/*" multiple />
 
-  <div id="atividadeConcluidaContainer" style="display:none;">
-    <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
-    <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
-    <label><input type="radio" name="atividadeConcluida" value="mentais" /> Post Comum</label>
-  </div>
-</form>
+      <div id="atividadeConcluidaContainer" style="display:none;">
+        <label><input type="radio" name="atividadeConcluida" value="fisicas" /> Atividades físicas</label>
+        <label><input type="radio" name="atividadeConcluida" value="mentais" /> Atividades mentais</label>
+        <label><input type="radio" name="atividadeConcluida" value="mentais" /> Post Comum</label>
+      </div>
+    </form>
 
     <section id="feed" class="feed"></section>
   </main>
@@ -62,5 +63,3 @@
     });
   </script>
 </body>
-
-</html>
